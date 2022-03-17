@@ -1,0 +1,162 @@
+// Variables 
+
+// Color 
+$primary-color: #ff3d4f;
+$primary-color-alt: #db2134;
+$white-color: #fff;
+$bg-color: #f6f5ff;
+$dark-color: #000a2d;
+$grey-color: #6e7797;
+
+// Font Family 
+
+@font-face {
+    font-family: relway;
+    src: url(../../vendors/fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: relwayMedium;
+    src: url(../../vendors/fonts/Raleway/static/Raleway-Medium.ttf);
+}
+
+@font-face {
+    font-family: relwayBold;
+    src: url(../../vendors/fonts/Raleway/static/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: relwaySemibold;
+    src: url(../../vendors/fonts/Raleway/static/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: relwayThin;
+    src: url(../../vendors/fonts/Raleway/static/Raleway-Light.ttf);
+}
+
+// Global CSS 
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    font-family: relway;
+    background-color: $white-color;
+}
+
+.container {
+    width: 1440px;
+    margin: auto;
+
+    @media (max-width:1500px) {
+        width: 100%;
+        margin: auto;
+        padding: 0rem 1.5rem;
+    }
+}
+
+.container-md {
+    width: 1140px;
+    margin: auto;
+
+    @media (max-width: 1213px) {
+        width: 100%;
+        padding: 0rem 2rem;
+    }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: relwayBold;
+}
+
+p,
+a {
+    font-family: relwayThin;
+}
+
+.scrolltop {
+    position: fixed;
+    right: 50px;
+    bottom: -80px;
+    background: $primary-color;
+    display: grid;
+    place-items: center;
+    color: $white-color;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 8;
+    transition: all 0.5s ease;
+
+    i {
+        font-size: 1.4rem;
+    }
+}
+
+.header-shadow {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.owl-controls .owl-nav {
+    position: absolute;
+    right: 0px;
+    top: -27%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.owl-controls .owl-nav div {
+    margin-right: 1rem;
+    color: $primary-color;
+}
+
+.owl-controls .owl-nav div i {
+    transition: all 0.5s ease;
+    font-size: 2rem;
+}
+
+
+.owl-controls .owl-nav div i:active,
+.owl-controls .owl-nav div i:hover {
+    color: $grey-color;
+}
+
+.show-menu-lg {
+    transform: scale(0);
+
+    @media (max-width:1020px) {
+        right: 0% !important;
+        transform: scale(1);
+
+    }
+}
